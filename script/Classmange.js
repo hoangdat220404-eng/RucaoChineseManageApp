@@ -24,6 +24,8 @@ const headerTitle = document.getElementById('schedult-header'); // Header để 
 const breakList = document.getElementById('detail-break-list');
 const addStudentBtn = document.getElementById('add-student-btn');
 const newStudentNameInput = document.getElementById('student-name');
+const teamsLinkAnchor = document.getElementById('detail-teams-link');
+const teacherSpan = document.getElementById('detail-teacher-name');
 
 
 let teacherClassData = null; // Biến duy nhất để lưu dữ liệu
@@ -52,7 +54,6 @@ function updateClassCardStatus(className, isActive) {
         console.log(`Đã cập nhật giao diện cho card lớp '${className}'.`);
     }
 }
-
 
 
 
@@ -424,6 +425,7 @@ function populateClassDetails(teacherName, className) {
     }
 
     document.getElementById('detail-class-type').textContent = classDetails.loaiLop || 'N/A';
+    document.getElementById('detail-teams-link').textContent = classDetails.TeamsConversationID || 'N/A'
     let Class_abnormal_number = Object.values(classDetails.buoibatthuong)
                             .filter(buoi => buoi[5] === true).length;
 
@@ -1350,4 +1352,164 @@ newStudentNameInput.addEventListener('keypress', (e) => {
         e.preventDefault(); // Ngăn hành vi mặc định (như submit form)
         addStudentBtn.click(); // Giả lập một cú click vào nút "+"
     }
+});
+
+
+/**
+ * Xử lý chỉnh sửa Teams Link khi nháy đúp vào thẻ DIV
+ */
+
+
+teamsLinkAnchor.addEventListener('dblclick', function () {
+    // Nếu đã có input bên trong rồi thì không làm gì cả (tránh bị lặp)
+    if (this.querySelector('input')) return;
+
+    // 1. Lấy giá trị hiện tại
+    // Nếu nội dung là "Chưa cập nhật link", ta để trống ô input cho dễ nhập
+    const currentText = this.innerText.trim();
+    const initialValue = currentText === "Chưa cập nhật link" ? "" : currentText;
+
+    // 2. Tạo giao diện chỉnh sửa nhanh
+    const originalContent = this.innerHTML; // Lưu lại để dùng nếu muốn Cancel
+    this.innerHTML = `
+        <div style="display: flex; gap: 5px; width: 100%;">
+            <input type="text" id="edit-teams-input" 
+                
+                value="${initialValue}" placeholder="Dán link Teams tại đây...">
+            <button id="save-teams-btn">Lưu</button>
+            <button id="cancel-teams-btn" style="background: #6c757d; color: white; border: none; border-radius: 3px; padding: 2px 8px; cursor: pointer;">Hủy</button>
+        </div>
+    `;
+
+    const input = document.getElementById('edit-teams-input');
+    const saveBtn = document.getElementById('save-teams-btn');
+    const cancelBtn = document.getElementById('cancel-teams-btn');
+
+    input.focus();
+
+    // 3. Hàm lưu dữ liệu
+    const saveAction = () => {
+        const newValue = input.value.trim();
+        if (newValue) {
+            // Hiển thị dạng link để người dùng bấm được
+            this.innerHTML = `<div target="_blank" style=" text-decoration: none;">${newValue}</div>`;
+            
+            // Cập nhật vào biến toàn cục của bạn (nếu cần)
+            if (teacherClassData[currentClassInfo.teacher] && teacherClassData[currentClassInfo.teacher]['Class'][currentClassInfo.className]) {
+                teacherClassData[currentClassInfo.teacher]['Class'][currentClassInfo.className]['TeamsConversationID'] = newValue;
+                // Lưu vào session storage
+                sessionStorage.setItem('teacherClassDB', JSON.stringify(teacherClassData));
+                console.log("Đã lưu dữ liệu mới:", string_schedules);
+            }
+            
+            console.log("Đã lưu Link mới:", newValue);
+        } else {
+            this.innerHTML = "Chưa cập nhật link";
+        }
+    };
+
+    // 4. Các sự kiện bấm nút
+    saveBtn.onclick = (e) => {
+        e.stopPropagation(); // Ngăn sự kiện dblclick kích hoạt lại
+        saveAction();
+    };
+
+    cancelBtn.onclick = (e) => {
+        e.stopPropagation();
+        this.innerHTML = originalContent;
+    };
+
+    // Bấm Enter để lưu, Esc để hủy
+    input.onkeydown = (e) => {
+        if (e.key === 'Enter') saveAction();
+        if (e.key === 'Escape') this.innerHTML = originalContent;
+    };
+});
+
+
+teacherSpan.addEventListener('dblclick', function () {
+    // Nếu đang hiện dropdown rồi thì không làm gì cả
+    if (this.querySelector('select')) return;
+
+    // 1. Lấy danh sách tên giáo viên từ dữ liệu có sẵn (giống logic populateTeacherList)
+    if (!teacherClassData) return;
+    const teacherNames = Object.keys(teacherClassData).sort();
+    
+    // 2. Lưu tên giáo viên hiện tại
+    const currentTeacher = this.innerText.trim();
+
+    // 3. Tạo thẻ Select
+    const select = document.createElement('select');
+    select.id = 'edit-teacher-dropdown';
+    select.style.padding = '2px 5px';
+    select.style.borderRadius = '4px';
+    select.style.border = '1px solid #0066cc';
+    select.style.fontSize = 'inherit';
+    select.style.width = '100%';
+
+    // 4. Đổ danh sách giáo viên vào Select
+    teacherNames.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.text = name;
+        if (name === currentTeacher) option.selected = true;
+        select.appendChild(option);
+    });
+
+    // 5. Thay thế nội dung Span bằng Select
+    this.innerText = ''; 
+    this.appendChild(select);
+    select.focus();
+
+    // --- Hàm thực hiện Lưu ---
+    const saveNewTeacher = () => {
+        const newTeacherName = select.value;
+        const oldTeacherName = currentClassInfo.teacher;
+        // Cập nhật giao diện
+        this.innerText = newTeacherName;
+
+        // Cập nhật vào logic dữ liệu (currentClassInfo)
+        if (currentClassInfo) {
+            currentClassInfo.teacher = newTeacherName;
+        }
+
+        console.log(`Đã đổi giáo viên lớp sang: ${newTeacherName}`);
+        const newInitials = newTeacherName.trim().split(/\s+/).map(word => word[0]).join('').toUpperCase();
+        
+        // 2. Tách tên học viên từ className cũ (Rucao_CT_Hồng Lê)
+        // Chia chuỗi thành các phần dựa trên dấu gạch dưới
+        const parts = currentClassInfo.className.split('_');
+
+        // parts[0] là "Rucao"
+        // parts[1] là "CT" (tên viết tắt cũ)
+        // parts.slice(2) sẽ lấy tất cả các phần từ sau tên viết tắt (đề phòng tên học viên có dấu _)
+        const studentName = parts.slice(2).join('_');
+
+        // 3. Ghép lại thành tên lớp mới
+        const newClassName = `Rucao_${newInitials}_${studentName}`;
+        if (teacherClassData[oldTeacherName] && teacherClassData[oldTeacherName]['Class'][currentClassInfo.className]) {
+            teacherClassData[newTeacherName]['Class'][newClassName] = teacherClassData[oldTeacherName]['Class'][currentClassInfo.className];
+            // Lưu vào session storage
+            delete teacherClassData[oldTeacherName]['Class'][currentClassInfo.className];
+            sessionStorage.setItem('teacherClassDB', JSON.stringify(teacherClassData));
+        }
+    };
+
+    // --- Sự kiện xử lý ---
+    
+    // Lưu khi chọn xong (change) hoặc khi click ra ngoài (blur)
+    select.onchange = saveNewTeacher;
+    
+    select.onblur = () => {
+        // Nếu người dùng click ra ngoài mà không chọn cái mới, vẫn hiển thị lại tên
+        if (this.contains(select)) {
+            this.innerText = select.value;
+        }
+    };
+
+    // Nhấn Enter để lưu, Esc để hủy
+    select.onkeydown = (e) => {
+        if (e.key === 'Enter') saveNewTeacher();
+        if (e.key === 'Escape') this.innerText = currentTeacher;
+    };
 });

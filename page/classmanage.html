@@ -102,16 +102,28 @@
                         <span class="label">Tổng số buổi đã học</span>
                         <span id="detail-total-sessions" class="value">...</span>
                     </div>
-                        <div class="info-item">
-                            <div class="status-toggle-container">
-                                <label class="switch">
-                                    <input type="checkbox" id="class-status-toggle">
-                                    <span class="slider round"></span>
-                                </label>
-                                <span id="class-status-label" class="status-label">Đang hoạt động</span>
-                            </div>
+                    <div class="info-item">
+                        <div class="status-toggle-container">
+                            <label class="switch">
+                                <input type="checkbox" id="class-status-toggle">
+                                <span class="slider round"></span>
+                            </label>
+                            <span id="class-status-label" class="status-label">Đang hoạt động</span>
                         </div>
                     </div>
+                
+                    <!-- THÊM MỚI: Nằm TRONG detail-grid nhưng chiếm toàn bộ 1 hàng ngang -->
+                    <div class="info-item full-width-item" style="grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; margin-top: 10px;">
+                        <span class="label" style="margin-right: 10px; white-space: nowrap; margin-bottom: 0px;">Teams Links:</span>
+                        <div id="detail-teams-link" class="value" target="_blank" style=" text-decoration: none; word-break: break-all;">
+                            <!-- JS sẽ điền link vào đây -->
+                            Chưa cập nhật link
+                        </div>
+                    </div>
+                
+                </div> <!-- Hết phần detail-grid -->
+                <!-- THÊM MỚI: Phần Teams Links nằm ngoài detail-grid để tách biệt hoàn toàn -->
+                
             
                 
                     <!-- Hàng 2: Các tab chức năng (đã bỏ tab Bài tập) -->

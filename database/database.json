@@ -1,238 +1,7 @@
 {
-    "Bảo Ngọc": {
-        "Age": "31",
-        "Class": {},
-        "ID_Calendar": "78675d8aedcf3de1168dba389dbf5fb3fd4820affa0e647c31367a055de81c33@group.calendar.google.com",
-        "Info": "THẠC SĨ GIÁO DỤC HÁN NGỮ"
-    },
     "Cát Tường": {
         "Age": 23,
         "Class": {
-            "Rucao_CT_Hồng Lê": {
-                "Members": {
-                    "Hồng Lê": {
-                        "Off_dates": [],
-                        "Study_dates": [],
-                        "TuitionFee": {
-                            "K1": "Done",
-                            "K2": "Done",
-                            "K3": "Done"
-                        },
-                        "isStudying": "True"
-                    }
-                },
-                "Notifications": [
-                    0,
-                    0,
-                    0
-                ],
-                "Study_week_day": "Thứ 2, 09:00-10:30 | Thứ 4, 09:00-10:30",
-                "TeamsConversationID": "19:meeting_NTNlNGFiMGQtMWI2YS00NmQ2LWI4OTUtNjBiMWRmNDc4ZjIw@thread.v2",
-                "buoiDaHoc": {
-                    "02b5c445-3257-4933-883c-c06c1e378583": [
-                        "2025-12-15",
-                        "08:59:52",
-                        "10:33:39",
-                        "1 giờ 33 phút 47 giây",
-                        [
-                            "Dai Duong Bui",
-                            "Chloe Dang",
-                            "Chloe"
-                        ],
-                        "Normal"
-                    ],
-                    "18e97a07-c078-455a-a843-c010fa4a33f6": [
-                        "2025-12-01",
-                        "08:58:50",
-                        "11:05:33",
-                        "2 giờ 6 phút 43 giây",
-                        [
-                            "Annie T Le",
-                            "Chloe Dang"
-                        ],
-                        "Absence"
-                    ],
-                    "24baddd3-91f0-46a5-bce7-61f0261cefeb": [
-                        "2025-11-12",
-                        "08:56:42",
-                        "10:07:00",
-                        "1 giờ 10 phút 18 giây",
-                        [
-                            "Chloe Dang",
-                            "Hong Le",
-                            "CAT TUONG 2002"
-                        ],
-                        "Absence"
-                    ],
-                    "35416dcc-a363-4f4f-abc2-c2a3d8c5ba37": [
-                        "2025-12-10",
-                        "08:56:45",
-                        "10:36:23",
-                        "1 giờ 39 phút 38 giây",
-                        [
-                            "Dai Duong Bui",
-                            "Chloe Dang"
-                        ],
-                        "Late"
-                    ],
-                    "46fb5797-58dc-4a9c-841e-fcdc6245d827": [
-                        "2025-12-03",
-                        "08:59:43",
-                        "10:31:35",
-                        "1 giờ 31 phút 52 giây",
-                        [
-                            "Dai Duong Bui",
-                            "Chloe Dang",
-                            "Chloe Dang"
-                        ],
-                        "Absence"
-                    ],
-                    "4db569fb-800f-4cec-a6d5-d3c1a6872e67": [
-                        "2025-11-26",
-                        "08:47:04",
-                        "10:19:55",
-                        "1 giờ 32 phút 51 giây",
-                        [
-                            "Chloe",
-                            "Annie T Le",
-                            "Chloe Dang"
-                        ],
-                        "Absence"
-                    ],
-                    "627418fd-0218-4a34-816a-c279c6dd4099": [
-                        "2025-11-17",
-                        "08:52:21",
-                        "10:12:00",
-                        "1 giờ 19 phút 39 giây",
-                        [
-                            "Hong Le",
-                            "Chloe Dang",
-                            "Chloe"
-                        ],
-                        "Absence"
-                    ],
-                    "78d6ec63-cb5b-4688-83ef-b19ec12d4352": [
-                        "2025-11-10",
-                        "08:56:21",
-                        "10:13:59",
-                        "1 giờ 17 phút 38 giây",
-                        [
-                            "Chloe Dang",
-                            "Hong Le",
-                            "CAT TUONG 2002",
-                            "Như Thảo Nguyễn"
-                        ],
-                        "Absence"
-                    ],
-                    "b1522f06-7799-4ceb-b5cf-290a870223de": [
-                        "2025-11-19",
-                        "08:58:45",
-                        "10:24:11",
-                        "1 giờ 25 phút 26 giây",
-                        [
-                            "Chloe Dang",
-                            "Hong Le",
-                            "Chloe Dang"
-                        ],
-                        "Absence"
-                    ],
-                    "e4c7201f-a956-461e-b4b0-9d3647f419ae": [
-                        "2025-12-17",
-                        "08:59:20",
-                        "10:36:49",
-                        "1 giờ 37 phút 29 giây",
-                        [
-                            "Chloe",
-                            "Dai Duong Bui",
-                            "Chloe Dang"
-                        ],
-                        "Normal"
-                    ]
-                },
-                "buoiNghi": {
-                    "2025-11-24": "Nghỉ/Chưa dạy (Giữa khóa)",
-                    "2025-12-08": "Nghỉ/Chưa dạy (Mới nhất)"
-                },
-                "buoibatthuong": {
-                    "03019929-750a-481b-8caa-5f78bf951a33": [
-                        "2025-12-09",
-                        "09:01:01",
-                        "10:36:19",
-                        "1 giờ 35 phút 18 giây",
-                        [
-                            "Dai Duong Bui",
-                            "Chloe Dang"
-                        ],
-                        true,
-                        "WrongTime"
-                    ],
-                    "2da96c17-8ad6-4840-ac4b-24f0a92e37ab": [
-                        "2025-11-20",
-                        "09:00:01",
-                        "10:06:38",
-                        "1 giờ 6 phút 37 giây",
-                        [
-                            "Dai Duong Bui",
-                            "Chloe Dang",
-                            "Chloe"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "bf94c7ec-9863-477b-8dd7-26dfb998fc1f": [
-                        "2025-11-27",
-                        "08:54:39",
-                        "10:06:44",
-                        "1 giờ 12 phút 5 giây",
-                        [
-                            "Dai Duong Bui",
-                            "Chloe Dang",
-                            "Chloe Dang"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "c246e768-a0d9-4c83-bfaa-c6886726d18a": [
-                        "2025-11-17",
-                        "16:46:53",
-                        "16:46:57",
-                        "0 giờ 0 phút 4 giây",
-                        [
-                            "Annie T Le"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "e20d7520-8ad0-440d-8f87-ced655119e03": [
-                        "2025-11-13",
-                        "08:55:58",
-                        "10:07:54",
-                        "1 giờ 11 phút 56 giây",
-                        [
-                            "Hong Le",
-                            "CAT TUONG 2002",
-                            "Chloe Dang"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "e6d95af9-0cc4-4252-86c5-0b443a9d8510": [
-                        "2025-11-10",
-                        "08:46:31",
-                        "08:47:50",
-                        "0 giờ 1 phút 19 giây",
-                        [
-                            "Như Thảo Nguyễn",
-                            "Hong Le"
-                        ],
-                        false,
-                        "EndSoon"
-                    ]
-                },
-                "isActive": "True",
-                "loaiLop": "Personal",
-                "ngayBatDau": "2025-11-10"
-            },
             "Rucao_CT_Ý Tâm": {
                 "Members": {
                     "Ý Tâm": {
@@ -360,6 +129,140 @@
                 "isActive": "True",
                 "loaiLop": "Personal",
                 "ngayBatDau": "2025-11-18"
+            },
+            "Rucao_CT_Linh Đan": {
+                "Members": {
+                    "Linh Đan": {
+                        "Off_dates": [],
+                        "Study_dates": [],
+                        "TuitionFee": {
+                            "K1": "Done",
+                            "K2": "Done",
+                            "K3": "Done"
+                        },
+                        "isStudying": "True"
+                    }
+                },
+                "Notifications": [
+                    0,
+                    0,
+                    0
+                ],
+                "Study_week_day": "Thứ 5, 10:00-11:30 | Chủ Nhật, 10:00-11:30",
+                "TeamsConversationID": "19:meeting_ZjAwZGIyOTQtODY0Ny00YjVlLWFiZTEtMDcwZWJkMjFkMDVh@thread.v2",
+                "buoiDaHoc": {
+                    "0eaf7e00-ac1a-43ba-86cc-bf2b4db904f5": [
+                        "2025-12-14",
+                        "10:15:55",
+                        "12:02:06",
+                        "1 giờ 46 phút 11 giây",
+                        [
+                            "yen",
+                            "Dan"
+                        ],
+                        "Absence"
+                    ],
+                    "1c6d2907-aa57-456f-9f84-b8e37489f12b": [
+                        "2025-12-04",
+                        "10:01:16",
+                        "11:41:41",
+                        "1 giờ 40 phút 25 giây",
+                        [
+                            "Dan",
+                            "yen"
+                        ],
+                        "Absence"
+                    ],
+                    "a2cdc2be-9db9-469f-b127-23e7fb2d01ce": [
+                        "2025-12-11",
+                        "10:02:44",
+                        "11:46:44",
+                        "1 giờ 44 phút 0 giây",
+                        [
+                            "yen",
+                            "Dan"
+                        ],
+                        "Absence"
+                    ],
+                    "ae640584-2ecf-4379-b9a0-894cefc968d5": [
+                        "2025-12-18",
+                        "10:07:26",
+                        "11:52:29",
+                        "1 giờ 45 phút 3 giây",
+                        [
+                            "yen",
+                            "Dan"
+                        ],
+                        "Absence"
+                    ],
+                    "efae5f0b-2427-494c-ad5e-6095160dfbcf": [
+                        "2025-11-27",
+                        "10:00:21",
+                        "11:37:19",
+                        "1 giờ 36 phút 58 giây",
+                        [
+                            "yen",
+                            "Đan"
+                        ],
+                        "Absence"
+                    ],
+                    "fa8cf6f2-ad7e-4b55-8510-685d9183bcc6": [
+                        "2025-11-30",
+                        "10:00:49",
+                        "11:17:56",
+                        "1 giờ 17 phút 7 giây",
+                        [
+                            "Dan Do",
+                            "yen"
+                        ],
+                        "Absence"
+                    ]
+                },
+                "buoiNghi": {
+                    "2025-11-27": "Chưa dạy (Toàn bộ)",
+                    "2025-11-30": "Chưa dạy (Toàn bộ)",
+                    "2025-12-04": "Chưa dạy (Toàn bộ)",
+                    "2025-12-07": "Test chức năng"
+                },
+                "buoibatthuong": {
+                    "0a685151-22cc-4cfb-b94b-7dc586e96614": [
+                        "2025-12-09",
+                        "16:56:31",
+                        "16:56:58",
+                        "0 giờ 0 phút 27 giây",
+                        [
+                            "Như Thảo Nguyễn"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "41866ced-8ec0-4217-a339-ffe39ee38e08": [
+                        "2025-12-05",
+                        "20:11:58",
+                        "20:12:21",
+                        "0 giờ 0 phút 23 giây",
+                        [
+                            "Như Thảo Nguyễn"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "5480502d-92bf-4fe7-9f5d-2c40263a070a": [
+                        "2025-12-09",
+                        "14:59:55",
+                        "16:42:35",
+                        "1 giờ 42 phút 40 giây",
+                        [
+                            "yen",
+                            "dan"
+                        ],
+                        true,
+                        "WrongTime"
+                    ]
+                },
+                "isActive": true,
+                "loaiLop": "Personal",
+                "ngayBatDau": "2025-11-27"
             }
         },
         "ID_Calendar": "3b785e8a274bdecb5884e0c6ce790ca6a20e1c727ba9dccac5855052fc5bd898@group.calendar.google.com",
@@ -1481,17 +1384,10 @@
                 "isActive": "True",
                 "loaiLop": "Personal",
                 "ngayBatDau": "2025-09-21"
-            }
-        },
-        "ID_Calendar": "14254188f2f96cef60f8b12480c50e38e7167299979c945e324fe7a07488426d@group.calendar.google.com",
-        "Info": "Cô giáo Trung Quốc"
-    },
-    "Kim Yến": {
-        "Age": 20,
-        "Class": {
-            "Rucao_KY_Linh Đan": {
+            },
+            "Rucao_LY_Hồng Lê": {
                 "Members": {
-                    "Linh Đan": {
+                    "Hồng Lê": {
                         "Off_dates": [],
                         "Study_dates": [],
                         "TuitionFee": {
@@ -1507,122 +1403,220 @@
                     0,
                     0
                 ],
-                "Study_week_day": "Thứ 5, 10:00-11:30 | Chủ Nhật, 10:00-11:30",
-                "TeamsConversationID": "19:meeting_ZjAwZGIyOTQtODY0Ny00YjVlLWFiZTEtMDcwZWJkMjFkMDVh@thread.v2",
+                "Study_week_day": "Thứ 2, 09:00-10:30 | Thứ 4, 09:00-10:30",
+                "TeamsConversationID": "Ballo",
                 "buoiDaHoc": {
-                    "0eaf7e00-ac1a-43ba-86cc-bf2b4db904f5": [
-                        "2025-12-14",
-                        "10:15:55",
-                        "12:02:06",
-                        "1 giờ 46 phút 11 giây",
+                    "02b5c445-3257-4933-883c-c06c1e378583": [
+                        "2025-12-15",
+                        "08:59:52",
+                        "10:33:39",
+                        "1 giờ 33 phút 47 giây",
                         [
-                            "yen",
-                            "Dan"
+                            "Dai Duong Bui",
+                            "Chloe Dang",
+                            "Chloe"
+                        ],
+                        "Normal"
+                    ],
+                    "18e97a07-c078-455a-a843-c010fa4a33f6": [
+                        "2025-12-01",
+                        "08:58:50",
+                        "11:05:33",
+                        "2 giờ 6 phút 43 giây",
+                        [
+                            "Annie T Le",
+                            "Chloe Dang"
                         ],
                         "Absence"
                     ],
-                    "1c6d2907-aa57-456f-9f84-b8e37489f12b": [
-                        "2025-12-04",
-                        "10:01:16",
-                        "11:41:41",
-                        "1 giờ 40 phút 25 giây",
+                    "24baddd3-91f0-46a5-bce7-61f0261cefeb": [
+                        "2025-11-12",
+                        "08:56:42",
+                        "10:07:00",
+                        "1 giờ 10 phút 18 giây",
                         [
-                            "Dan",
-                            "yen"
+                            "Chloe Dang",
+                            "Hong Le",
+                            "CAT TUONG 2002"
                         ],
                         "Absence"
                     ],
-                    "a2cdc2be-9db9-469f-b127-23e7fb2d01ce": [
-                        "2025-12-11",
-                        "10:02:44",
-                        "11:46:44",
-                        "1 giờ 44 phút 0 giây",
+                    "35416dcc-a363-4f4f-abc2-c2a3d8c5ba37": [
+                        "2025-12-10",
+                        "08:56:45",
+                        "10:36:23",
+                        "1 giờ 39 phút 38 giây",
                         [
-                            "yen",
-                            "Dan"
+                            "Dai Duong Bui",
+                            "Chloe Dang"
+                        ],
+                        "Late"
+                    ],
+                    "46fb5797-58dc-4a9c-841e-fcdc6245d827": [
+                        "2025-12-03",
+                        "08:59:43",
+                        "10:31:35",
+                        "1 giờ 31 phút 52 giây",
+                        [
+                            "Dai Duong Bui",
+                            "Chloe Dang",
+                            "Chloe Dang"
                         ],
                         "Absence"
                     ],
-                    "ae640584-2ecf-4379-b9a0-894cefc968d5": [
-                        "2025-12-18",
-                        "10:07:26",
-                        "11:52:29",
-                        "1 giờ 45 phút 3 giây",
+                    "4db569fb-800f-4cec-a6d5-d3c1a6872e67": [
+                        "2025-11-26",
+                        "08:47:04",
+                        "10:19:55",
+                        "1 giờ 32 phút 51 giây",
                         [
-                            "yen",
-                            "Dan"
+                            "Chloe",
+                            "Annie T Le",
+                            "Chloe Dang"
                         ],
                         "Absence"
                     ],
-                    "efae5f0b-2427-494c-ad5e-6095160dfbcf": [
-                        "2025-11-27",
-                        "10:00:21",
-                        "11:37:19",
-                        "1 giờ 36 phút 58 giây",
+                    "627418fd-0218-4a34-816a-c279c6dd4099": [
+                        "2025-11-17",
+                        "08:52:21",
+                        "10:12:00",
+                        "1 giờ 19 phút 39 giây",
                         [
-                            "yen",
-                            "Đan"
+                            "Hong Le",
+                            "Chloe Dang",
+                            "Chloe"
                         ],
                         "Absence"
                     ],
-                    "fa8cf6f2-ad7e-4b55-8510-685d9183bcc6": [
-                        "2025-11-30",
-                        "10:00:49",
-                        "11:17:56",
-                        "1 giờ 17 phút 7 giây",
+                    "78d6ec63-cb5b-4688-83ef-b19ec12d4352": [
+                        "2025-11-10",
+                        "08:56:21",
+                        "10:13:59",
+                        "1 giờ 17 phút 38 giây",
                         [
-                            "Dan Do",
-                            "yen"
+                            "Chloe Dang",
+                            "Hong Le",
+                            "CAT TUONG 2002",
+                            "Như Thảo Nguyễn"
                         ],
                         "Absence"
+                    ],
+                    "b1522f06-7799-4ceb-b5cf-290a870223de": [
+                        "2025-11-19",
+                        "08:58:45",
+                        "10:24:11",
+                        "1 giờ 25 phút 26 giây",
+                        [
+                            "Chloe Dang",
+                            "Hong Le",
+                            "Chloe Dang"
+                        ],
+                        "Absence"
+                    ],
+                    "e4c7201f-a956-461e-b4b0-9d3647f419ae": [
+                        "2025-12-17",
+                        "08:59:20",
+                        "10:36:49",
+                        "1 giờ 37 phút 29 giây",
+                        [
+                            "Chloe",
+                            "Dai Duong Bui",
+                            "Chloe Dang"
+                        ],
+                        "Normal"
                     ]
                 },
                 "buoiNghi": {
-                    "2025-11-27": "Chưa dạy (Toàn bộ)",
-                    "2025-11-30": "Chưa dạy (Toàn bộ)",
-                    "2025-12-04": "Chưa dạy (Toàn bộ)",
-                    "2025-12-07": "Test chức năng"
+                    "2025-11-24": "Nghỉ/Chưa dạy (Giữa khóa)",
+                    "2025-12-08": "Nghỉ/Chưa dạy (Mới nhất)"
                 },
                 "buoibatthuong": {
-                    "0a685151-22cc-4cfb-b94b-7dc586e96614": [
+                    "03019929-750a-481b-8caa-5f78bf951a33": [
                         "2025-12-09",
-                        "16:56:31",
-                        "16:56:58",
-                        "0 giờ 0 phút 27 giây",
+                        "09:01:01",
+                        "10:36:19",
+                        "1 giờ 35 phút 18 giây",
                         [
-                            "Như Thảo Nguyễn"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "41866ced-8ec0-4217-a339-ffe39ee38e08": [
-                        "2025-12-05",
-                        "20:11:58",
-                        "20:12:21",
-                        "0 giờ 0 phút 23 giây",
-                        [
-                            "Như Thảo Nguyễn"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "5480502d-92bf-4fe7-9f5d-2c40263a070a": [
-                        "2025-12-09",
-                        "14:59:55",
-                        "16:42:35",
-                        "1 giờ 42 phút 40 giây",
-                        [
-                            "yen",
-                            "dan"
+                            "Dai Duong Bui",
+                            "Chloe Dang"
                         ],
                         true,
                         "WrongTime"
+                    ],
+                    "2da96c17-8ad6-4840-ac4b-24f0a92e37ab": [
+                        "2025-11-20",
+                        "09:00:01",
+                        "10:06:38",
+                        "1 giờ 6 phút 37 giây",
+                        [
+                            "Dai Duong Bui",
+                            "Chloe Dang",
+                            "Chloe"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "bf94c7ec-9863-477b-8dd7-26dfb998fc1f": [
+                        "2025-11-27",
+                        "08:54:39",
+                        "10:06:44",
+                        "1 giờ 12 phút 5 giây",
+                        [
+                            "Dai Duong Bui",
+                            "Chloe Dang",
+                            "Chloe Dang"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "c246e768-a0d9-4c83-bfaa-c6886726d18a": [
+                        "2025-11-17",
+                        "16:46:53",
+                        "16:46:57",
+                        "0 giờ 0 phút 4 giây",
+                        [
+                            "Annie T Le"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "e20d7520-8ad0-440d-8f87-ced655119e03": [
+                        "2025-11-13",
+                        "08:55:58",
+                        "10:07:54",
+                        "1 giờ 11 phút 56 giây",
+                        [
+                            "Hong Le",
+                            "CAT TUONG 2002",
+                            "Chloe Dang"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "e6d95af9-0cc4-4252-86c5-0b443a9d8510": [
+                        "2025-11-10",
+                        "08:46:31",
+                        "08:47:50",
+                        "0 giờ 1 phút 19 giây",
+                        [
+                            "Như Thảo Nguyễn",
+                            "Hong Le"
+                        ],
+                        false,
+                        "EndSoon"
                     ]
                 },
-                "isActive": true,
+                "isActive": "True",
                 "loaiLop": "Personal",
-                "ngayBatDau": "2025-11-27"
-            },
+                "ngayBatDau": "2025-11-10"
+            }
+        },
+        "ID_Calendar": "14254188f2f96cef60f8b12480c50e38e7167299979c945e324fe7a07488426d@group.calendar.google.com",
+        "Info": "Cô giáo Trung Quốc"
+    },
+    "Kim Yến": {
+        "Age": 20,
+        "Class": {
             "Rucao_KY_Ngọc Hà": {
                 "Members": {
                     "Ngọc Hà": {
