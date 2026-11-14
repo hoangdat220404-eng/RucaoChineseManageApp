@@ -338,9 +338,11 @@ def format_date_for_bill(dt_object):
 
 # Số buổi mỗi khóa theo hậu tố tên lớp, khớp quy ước gắn nhãn buổi học trên
 # Google Calendar (Apps Script UpdateClass). None = lớp mặc định.
+# Khớp "chứa" chứ không phải "kết thúc bằng": tên lớp thật thường có đuôi tháng
+# phía sau, vd "Rucao_HG_HSK1 3.0 T9/26", "Rucao_KL_HSK1 3.0 09/26".
 KHOA_SCHEDULES = [
-    (re.compile(r'HSK1\s*3\.0\s*$', re.IGNORECASE), [10, 10, 8]),  # tổng 28 buổi / 3 khóa
-    (re.compile(r'HSK2\s*3\.0\s*$', re.IGNORECASE), [11, 11]),     # tổng 22 buổi / 2 khóa
+    (re.compile(r'HSK1\s*3\.0', re.IGNORECASE), [10, 10, 8]),  # tổng 28 buổi / 3 khóa
+    (re.compile(r'HSK2\s*3\.0', re.IGNORECASE), [11, 11]),     # tổng 22 buổi / 2 khóa
 ]
 DEFAULT_KHOA_SIZE = 8  # Lớp không khớp cấu hình trên: 8 buổi/khóa, lặp vô hạn
 

@@ -92,36 +92,17 @@ function processAndDisplayBillData(Process_Data) {
     studentSelectorDiv.style.display = 'block';
     for (const studentName of studentNames) {
         const sessions = Process_Data[studentName];
-
-        const NumberCourses = sessions.dates.length ;
-        
-        const isSpecialCourse = false;
-    
-        if (NumberCourses === 12){
-            const targetCourseNumber = 12;
-            const isSpecialCourse = true;
-        }
-        else{
-            const targetCourseNumber = 8;
-            const isSpecialCourse = false;
-        }
-        
         const option = document.createElement('option');
-        const isSessionCountValid = isSpecialCourse ? (NumberCourses === 12) : (NumberCourses === 8);
-        console.log("hello sessions")
-        console.log(sessions)
-        if (isSessionCountValid && !sessions.isDisabled) {
+
+        // Server đã tính sẵn số buổi kỳ vọng theo loại lớp (HSK1 3.0, HSK2 3.0, lớp thường)
+        // và trả về isDisabled, nên không tính lại ở đây.
+        if (!sessions.isDisabled) {
             const dates = sessions.dates.map(s => formatDate(s));
             option.value = `${sessions.name}|${sessions.courseNumber}`;
             option.textContent = `${sessions.displayText}`;
             option.dataset.dates = JSON.stringify(dates);
             validOptions.push(option);
-        } else if (sessions.isDisabled) {
-            option.disabled = true;
-            option.textContent = `${sessions.displayText}`;
-            disabledOptions.push(option);
-        }
-        else {
+        } else {
             option.disabled = true;
             option.textContent = `${sessions.displayText}`;
             disabledOptions.push(option);
@@ -158,42 +139,22 @@ function processAndDisplayData() {
     studentSelectorDiv.style.display = 'block';
     for (const studentName of studentNames) {
         const sessions = allData[studentName];
-
-        const NumberCourses = sessions.dates.length ;
-        
-        const isSpecialCourse = false;
-    
-        if (NumberCourses === 12){
-            const targetCourseNumber = 12;
-            const isSpecialCourse = true;
-        }
-        else{
-            const targetCourseNumber = 8;
-            const isSpecialCourse = false;
-        }
-        
         const option = document.createElement('option');
-        const isSessionCountValid = isSpecialCourse ? (NumberCourses === 12) : (NumberCourses === 8);
-        if (isSessionCountValid && !sessions.isDisabled) {
-            console.log(sessions.name);
+
+        // Server đã tính sẵn số buổi kỳ vọng theo loại lớp (HSK1 3.0, HSK2 3.0, lớp thường)
+        // và trả về isDisabled, nên không tính lại ở đây.
+        if (!sessions.isDisabled) {
             const dates = sessions.dates.map(s => formatDate(s));
             option.value = `${sessions.name}|${sessions.courseNumber}`;
             option.textContent = `${sessions.displayText}`;
             option.dataset.dates = JSON.stringify(dates);
             option.dataset.teacher = sessions.teacher;
             validOptions.push(option);
-        }else if(sessions.isDisabled){
-            option.disabled = true;
-            option.textContent = `${sessions.displayText}`;
-            disabledOptions.push(option);
-        } 
-        else {
+        } else {
             option.disabled = true;
             option.textContent = `${sessions.displayText}`;
             disabledOptions.push(option);
         }
-        
-
     }
     validOptions.sort((a, b) => a.textContent.localeCompare(b.textContent));
     disabledOptions.sort((a, b) => a.textContent.localeCompare(b.textContent));
@@ -329,15 +290,17 @@ function drawBillOnCanvas(studentName, courseNumber, dates) {
     let lineHeight;
     const sessionCount = dates.length;
 
-    if (sessionCount === 8) {
+    // Chưa có template riêng cho khóa 10 buổi (HSK1 3.0) và 11 buổi (HSK2 3.0)
+    // -> dùng tạm template 12 buổi, các dòng dư ở cuối để trống.
+    if (sessionCount <= 8) {
         selectedTemplate = templateImage;
         lineHeight = 80;
-    } else if (sessionCount === 12) {
+    } else if (sessionCount <= 12) {
         selectedTemplate = templateImage12b;
         lineHeight = 60;
     } else {
         console.error("Số buổi không hợp lệ để vẽ:", sessionCount);
-        alert("Lỗi: Số buổi không hợp lệ (cần 8 hoặc 12).");
+        alert(`Lỗi: Khóa có ${sessionCount} buổi, vượt quá template tối đa 12 buổi.`);
         return null;
     }
     
