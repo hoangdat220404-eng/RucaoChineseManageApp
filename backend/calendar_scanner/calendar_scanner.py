@@ -336,6 +336,31 @@ def format_date_for_bill(dt_object):
     return f"{dt_object.day} tháng {dt_object.month}, {dt_object.year}"
 
 
+# Số buổi mỗi khóa theo hậu tố tên lớp, khớp quy ước gắn nhãn buổi học trên
+# Google Calendar (Apps Script UpdateClass). None = lớp mặc định.
+KHOA_SCHEDULES = [
+    (re.compile(r'HSK1\s*3\.0\s*$', re.IGNORECASE), [10, 10, 8]),  # tổng 28 buổi / 3 khóa
+    (re.compile(r'HSK2\s*3\.0\s*$', re.IGNORECASE), [11, 11]),     # tổng 22 buổi / 2 khóa
+]
+DEFAULT_KHOA_SIZE = 8  # Lớp không khớp cấu hình trên: 8 buổi/khóa, lặp vô hạn
+
+
+def get_khoa_sizes(title):
+    for pattern, sizes in KHOA_SCHEDULES:
+        if pattern.search(title):
+            return sizes
+    return None
+
+
+def get_expected_session_count(title, course_num):
+    """Số buổi để khóa `course_num` của lớp `title` được coi là hoàn thành."""
+    khoa_sizes = get_khoa_sizes(title)
+    if khoa_sizes:
+        idx = min(course_num, len(khoa_sizes)) - 1
+        return khoa_sizes[idx]
+    return DEFAULT_KHOA_SIZE
+
+
 CALENDAR_IDS = get_teacher_calendars_from_db()
 REV_CALENDAR_IDS = dict(zip(CALENDAR_IDS.values(), CALENDAR_IDS.keys()))
 # --- HÀM CHÍNH ---
@@ -409,7 +434,7 @@ def main():
 
             print(f">> Đang xử lý Bill: {student_name_from_bill} (Ngày {bill_date})...")
 
-            # 4.1: Tìm buổi học cuối cùng (B8/B12) cùng ngày với Bill
+            # 4.1: Tìm buổi học cuối cùng của khóa (theo số buổi/khóa của loại lớp) cùng ngày với Bill
             target_course_num = None
             for event in all_recent_events:
                 if 'dateTime' in event['start']:
@@ -417,12 +442,13 @@ def main():
                     if evt_date == bill_date:
                         evt_student, evt_course, evt_session = parse_session_event_title(event.get('summary', ''))
                         if (evt_student and evt_student.lower() == student_name_from_bill.lower() and
-                            (evt_session == 8 or evt_session == 12)):
+                            evt_course is not None and
+                            evt_session == get_expected_session_count(student_name_from_bill, evt_course)):
                             target_course_num = evt_course
                             break
-            
+
             if not target_course_num:
-                print(f"   ⚠️ Không tìm thấy buổi kết thúc (B8/B12) cùng ngày. Bỏ qua.")
+                print(f"   ⚠️ Không tìm thấy buổi kết thúc khóa cùng ngày. Bỏ qua.")
                 continue # Chuyển sang Bill tiếp theo
 
             # 4.2: Tìm mốc ngày bắt đầu thu thập
@@ -438,8 +464,9 @@ def main():
                     if evt_date >= bill_date: continue
                     
                     evt_student, evt_course, evt_session = parse_session_event_title(event.get('summary', ''))
-                    if (evt_student and evt_student.lower() == student_name_from_bill.lower() and 
-                        evt_course == previous_course_num and (evt_session == 8 or evt_session == 12)):
+                    if (evt_student and evt_student.lower() == student_name_from_bill.lower() and
+                        evt_course == previous_course_num and
+                        evt_session == get_expected_session_count(student_name_from_bill, previous_course_num)):
                         start_date_to_collect = evt_date
                         break
             

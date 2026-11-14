@@ -6,7 +6,7 @@ from flask import Flask, jsonify, send_from_directory, request
 from flask_cors import CORS
 import threading
 import re # <-- Thêm import còn thiếu
-from calendar_scanner.calendar_scanner import main as scan_calendar_main, find_specific_class, delete_bill_task, create_new_class,delete_class_and_future_instances, create_calendar_events_for_class
+from calendar_scanner.calendar_scanner import main as scan_calendar_main, find_specific_class, delete_bill_task, create_new_class,delete_class_and_future_instances, create_calendar_events_for_class, get_expected_session_count
 import datetime
 
 
@@ -42,39 +42,24 @@ def process_bill_data(all_data):
 
         if not courses:
             continue
-        
-        course_numbers = list(courses.keys())
-        target_course_num = None
-        is_special_course = False
 
-        courses_with_b = [cn for cn in course_numbers if any(s['sessionNumber'] == 12 for s in courses[cn])]
-        if courses_with_b:
-            is_special_course = True
-        else:
-            courses_with_b = [cn for cn in course_numbers if any(s['sessionNumber'] == 8 for s in courses[cn])]
-   
-        for target_course_num in courses_with_b:        
-            if target_course_num is not None:
-                target_sessions = courses[target_course_num]
-                session_count = len(target_sessions)
-                is_valid = (is_special_course and session_count == 12) or (not is_special_course and session_count == 8)
-                target_sessions.sort(key=lambda s: s['sessionNumber'])
-                dates = [s['date'] for s in target_sessions]
-                expected_count = 12 if is_special_course else 8
-                
-                processed_list.append({
-                    'name': student_name, 'courseNumber': target_course_num, 'teacher': teacher,
-                    'isDisabled': not is_valid, 'dates': dates,
-                    'displayText': f"{student_name} - Khóa {target_course_num} ({session_count}/{expected_count} buổi)" if not is_valid else f"{student_name} - Khóa {target_course_num} ({session_count} buổi)"
-                })
-            else:
-                highest_course_num = max(course_numbers)
-                session_count = len(courses[highest_course_num])
-                processed_list.append({
-                    'name': student_name, 'courseNumber': highest_course_num,
-                    'isDisabled': True, 'dates': [],
-                    'displayText': f"{student_name} - Khóa {highest_course_num} ({session_count} buổi, chưa kết thúc)"
-                })
+        # Chỉ hiển thị các khóa đã thực sự chạm buổi cuối cùng của khóa đó
+        # (số buổi cuối tùy loại lớp, xem get_expected_session_count).
+        for target_course_num, target_sessions in courses.items():
+            expected_count = get_expected_session_count(student_name, target_course_num)
+            if not any(s['sessionNumber'] == expected_count for s in target_sessions):
+                continue
+
+            session_count = len(target_sessions)
+            is_valid = session_count == expected_count
+            target_sessions.sort(key=lambda s: s['sessionNumber'])
+            dates = [s['date'] for s in target_sessions]
+
+            processed_list.append({
+                'name': student_name, 'courseNumber': target_course_num, 'teacher': teacher,
+                'isDisabled': not is_valid, 'dates': dates,
+                'displayText': f"{student_name} - Khóa {target_course_num} ({session_count}/{expected_count} buổi)" if not is_valid else f"{student_name} - Khóa {target_course_num} ({session_count} buổi)"
+            })
 
     processed_list.sort(key=lambda x: (x['isDisabled'], x['name']))
     return processed_list
