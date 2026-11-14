@@ -7,7 +7,8 @@ import time
 import webview
 from flask_server import app
 from calendar_scanner.calendar_scanner import main as scan_calendar_main
-from teams_api.Team_fetch import main as token_generate
+# TẠM THỜI COMMENT: Tắt cơ chế Selenium lấy lịch sử chat Teams (selenium-wire không tương thích blinker mới)
+# from teams_api.Team_fetch import main as token_generate
 import json
 
 # --- CẤU HÌNH ĐƯỜNG DẪN ---
@@ -47,10 +48,11 @@ class LoadingApi:
         
         # Bước 2: Tạo Token
         self._window.evaluate_js('setProgress(80, "Đang xác thực tài khoản Teams...")')
-        try:
-            token_generate()
-        except Exception as e:
-            print(f"Lỗi generate token: {e}")
+        # TẠM THỜI COMMENT: Tắt cơ chế Selenium lấy lịch sử chat Teams
+        # try:
+        #     token_generate()
+        # except Exception as e:
+        #     print(f"Lỗi generate token: {e}")
 
         # Bước 3: Đợi Flask (optional, đảm bảo flask đã lên)
         self._window.evaluate_js('setProgress(95, "Đang kết nối máy chủ...")')

@@ -1392,14 +1392,13 @@ teamsLinkAnchor.addEventListener('dblclick', function () {
         const newValue = input.value.trim();
         if (newValue) {
             // Hiển thị dạng link để người dùng bấm được
-            this.innerHTML = `<div target="_blank" style=" text-decoration: none;">${newValue}</div>`;
+            this.innerHTML = `${newValue}`;
             
             // Cập nhật vào biến toàn cục của bạn (nếu cần)
             if (teacherClassData[currentClassInfo.teacher] && teacherClassData[currentClassInfo.teacher]['Class'][currentClassInfo.className]) {
                 teacherClassData[currentClassInfo.teacher]['Class'][currentClassInfo.className]['TeamsConversationID'] = newValue;
                 // Lưu vào session storage
                 sessionStorage.setItem('teacherClassDB', JSON.stringify(teacherClassData));
-                console.log("Đã lưu dữ liệu mới:", string_schedules);
             }
             
             console.log("Đã lưu Link mới:", newValue);

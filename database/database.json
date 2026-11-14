@@ -2,134 +2,6 @@
     "Cát Tường": {
         "Age": 23,
         "Class": {
-            "Rucao_CT_Ý Tâm": {
-                "Members": {
-                    "Ý Tâm": {
-                        "Off_dates": [],
-                        "Study_dates": [],
-                        "TuitionFee": {
-                            "K1": "Done",
-                            "K2": "Done",
-                            "K3": "Done"
-                        },
-                        "isStudying": "True"
-                    }
-                },
-                "Notifications": [
-                    0,
-                    0,
-                    0
-                ],
-                "Study_week_day": "Thứ 4, 13:00-14:30 | Thứ 7, 11:30-13:00",
-                "TeamsConversationID": "19:meeting_MGFjNjI2MGYtNjZlZC00NTgyLWJlM2QtYjEzOGU4YzNkODlk@thread.v2",
-                "buoiDaHoc": {
-                    "4eb4d024-a866-459c-aa42-12765eb0a39d": [
-                        "2025-12-06",
-                        "11:31:41",
-                        "13:03:16",
-                        "1 giờ 31 phút 35 giây",
-                        [
-                            "Le Pham Y Tam - Duoc24",
-                            "Chloe Dang"
-                        ],
-                        "Absence"
-                    ],
-                    "53c7da84-63ab-4e0e-b0c4-c00e83040bac": [
-                        "2025-12-10",
-                        "12:57:16",
-                        "14:37:46",
-                        "1 giờ 40 phút 30 giây",
-                        [
-                            "Le Pham Y Tam - Duoc24",
-                            "Chloe Dang"
-                        ],
-                        "Normal"
-                    ],
-                    "6513fd5d-96e3-44f7-82a6-6bb8f5ddd3f5": [
-                        "2025-11-26",
-                        "12:57:22",
-                        "14:36:03",
-                        "1 giờ 38 phút 41 giây",
-                        [
-                            "Chloe Dang",
-                            "Chloe",
-                            "Le Pham Y Tam - Duoc24"
-                        ],
-                        "Absence"
-                    ]
-                },
-                "buoiNghi": {
-                    "2025-11-29": "Nghỉ/Chưa dạy (Giữa khóa)",
-                    "2025-12-03": "Nghỉ/Chưa dạy (Giữa khóa)",
-                    "2025-12-13": "Lí do chưa xác định",
-                    "2025-12-17": "Lí do chưa xác định"
-                },
-                "buoibatthuong": {
-                    "0679482b-6243-4bd8-928c-c61ba930e4f9": [
-                        "2025-12-18",
-                        "08:30:41",
-                        "08:50:17",
-                        "0 giờ 19 phút 36 giây",
-                        [
-                            "Chloe Dang"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "4a81b874-c779-4a9f-a875-693b410421e3": [
-                        "2025-12-06",
-                        "08:30:50",
-                        "08:55:06",
-                        "0 giờ 24 phút 16 giây",
-                        [
-                            "Le Pham Y Tam - Duoc24"
-                        ],
-                        false,
-                        "WrongTime"
-                    ],
-                    "6783b6c7-a626-424c-9973-f42637710fcf": [
-                        "2025-11-18",
-                        "08:28:06",
-                        "10:04:08",
-                        "1 giờ 36 phút 2 giây",
-                        [
-                            "Chloe Dang",
-                            "Ý Tâm",
-                            "Chloe Dang"
-                        ],
-                        true,
-                        "WrongTime"
-                    ],
-                    "73af0ebc-7a8b-4730-8c89-bcc001fee621": [
-                        "2025-11-22",
-                        "12:51:06",
-                        "14:34:31",
-                        "1 giờ 43 phút 25 giây",
-                        [
-                            "Cat Tuong",
-                            "Chloe Dang",
-                            "Le Pham Y Tam - Duoc24"
-                        ],
-                        true,
-                        "WrongTime"
-                    ],
-                    "ab1e7488-4db8-4379-92f9-3432f7d37937": [
-                        "2025-11-29",
-                        "12:53:56",
-                        "14:37:15",
-                        "1 giờ 43 phút 19 giây",
-                        [
-                            "Le Pham Y Tam - Duoc24",
-                            "Chloe Dang"
-                        ],
-                        true,
-                        "WrongTime"
-                    ]
-                },
-                "isActive": "True",
-                "loaiLop": "Personal",
-                "ngayBatDau": "2025-11-18"
-            },
             "Rucao_CT_Linh Đan": {
                 "Members": {
                     "Linh Đan": {
@@ -263,10 +135,144 @@
                 "isActive": true,
                 "loaiLop": "Personal",
                 "ngayBatDau": "2025-11-27"
+            },
+            "Rucao_CT_Ý Tâm": {
+                "Members": {
+                    "Ý Tâm": {
+                        "Off_dates": [],
+                        "Study_dates": [],
+                        "TuitionFee": {
+                            "K1": "Done",
+                            "K2": "Done",
+                            "K3": "Done"
+                        },
+                        "isStudying": "True"
+                    }
+                },
+                "Notifications": [
+                    0,
+                    0,
+                    0
+                ],
+                "Study_week_day": "Thứ 4, 13:00-14:30 | Thứ 7, 11:30-13:00",
+                "TeamsConversationID": "19:meeting_MGFjNjI2MGYtNjZlZC00NTgyLWJlM2QtYjEzOGU4YzNkODlk@thread.v2",
+                "buoiDaHoc": {
+                    "4eb4d024-a866-459c-aa42-12765eb0a39d": [
+                        "2025-12-06",
+                        "11:31:41",
+                        "13:03:16",
+                        "1 giờ 31 phút 35 giây",
+                        [
+                            "Le Pham Y Tam - Duoc24",
+                            "Chloe Dang"
+                        ],
+                        "Absence"
+                    ],
+                    "53c7da84-63ab-4e0e-b0c4-c00e83040bac": [
+                        "2025-12-10",
+                        "12:57:16",
+                        "14:37:46",
+                        "1 giờ 40 phút 30 giây",
+                        [
+                            "Le Pham Y Tam - Duoc24",
+                            "Chloe Dang"
+                        ],
+                        "Normal"
+                    ],
+                    "6513fd5d-96e3-44f7-82a6-6bb8f5ddd3f5": [
+                        "2025-11-26",
+                        "12:57:22",
+                        "14:36:03",
+                        "1 giờ 38 phút 41 giây",
+                        [
+                            "Chloe Dang",
+                            "Chloe",
+                            "Le Pham Y Tam - Duoc24"
+                        ],
+                        "Absence"
+                    ]
+                },
+                "buoiNghi": {
+                    "2025-11-29": "Nghỉ/Chưa dạy (Giữa khóa)",
+                    "2025-12-03": "Nghỉ/Chưa dạy (Giữa khóa)",
+                    "2025-12-13": "Lí do chưa xác định",
+                    "2025-12-17": "Lí do chưa xác định"
+                },
+                "buoibatthuong": {
+                    "0679482b-6243-4bd8-928c-c61ba930e4f9": [
+                        "2025-12-18",
+                        "08:30:41",
+                        "08:50:17",
+                        "0 giờ 19 phút 36 giây",
+                        [
+                            "Chloe Dang"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "4a81b874-c779-4a9f-a875-693b410421e3": [
+                        "2025-12-06",
+                        "08:30:50",
+                        "08:55:06",
+                        "0 giờ 24 phút 16 giây",
+                        [
+                            "Le Pham Y Tam - Duoc24"
+                        ],
+                        false,
+                        "WrongTime"
+                    ],
+                    "6783b6c7-a626-424c-9973-f42637710fcf": [
+                        "2025-11-18",
+                        "08:28:06",
+                        "10:04:08",
+                        "1 giờ 36 phút 2 giây",
+                        [
+                            "Chloe Dang",
+                            "Ý Tâm",
+                            "Chloe Dang"
+                        ],
+                        true,
+                        "WrongTime"
+                    ],
+                    "73af0ebc-7a8b-4730-8c89-bcc001fee621": [
+                        "2025-11-22",
+                        "12:51:06",
+                        "14:34:31",
+                        "1 giờ 43 phút 25 giây",
+                        [
+                            "Cat Tuong",
+                            "Chloe Dang",
+                            "Le Pham Y Tam - Duoc24"
+                        ],
+                        true,
+                        "WrongTime"
+                    ],
+                    "ab1e7488-4db8-4379-92f9-3432f7d37937": [
+                        "2025-11-29",
+                        "12:53:56",
+                        "14:37:15",
+                        "1 giờ 43 phút 19 giây",
+                        [
+                            "Le Pham Y Tam - Duoc24",
+                            "Chloe Dang"
+                        ],
+                        true,
+                        "WrongTime"
+                    ]
+                },
+                "isActive": "True",
+                "loaiLop": "Personal",
+                "ngayBatDau": "2025-11-18"
             }
         },
         "ID_Calendar": "3b785e8a274bdecb5884e0c6ce790ca6a20e1c727ba9dccac5855052fc5bd898@group.calendar.google.com",
         "Infor": "Ngôn ngữ Trung Quốc cử nhân USSH"
+    },
+    "Hương Giang": {
+        "Age": "",
+        "Class": {},
+        "ID_Calendar": "31f089a09887428eb25065cbc61ecaea8b0610beb29dc71d21d72441545669ae@group.calendar.google.com",
+        "Info": ""
     },
     "Khánh Ly": {
         "Age": "30",
@@ -1757,6 +1763,18 @@
         "Class": {},
         "ID_Calendar": "ngnthao1804@gmail.com",
         "Infor": "Founder Cô giáo đẹp gái"
+    },
+    "Thị Trang": {
+        "Age": "",
+        "Class": {},
+        "ID_Calendar": "f72aa6e6a6443fa53ddc414f9cf34f6f517f515f2375e8d8e7bf66d21ae83db1@group.calendar.google.com",
+        "Info": ""
+    },
+    "Trang Nguyễn": {
+        "Age": "",
+        "Class": {},
+        "ID_Calendar": "https://calendar.google.com/calendar/embed?src=169cfe8ddccdece2b7a9518bbe3aead5fa076be52d3427c45fa865558cc7e8b0%40group.calendar.google.com&ctz=Asia%2FHo_Chi_Minh",
+        "Info": ""
     },
     "Tuyết Mai": {
         "Age": "24",
